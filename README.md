@@ -1,0 +1,1 @@
+# solarpotential_lucerne
