@@ -34,6 +34,7 @@ Both datasets describe data in the region of the city of Lucerne.
 
 
 ## Questions to be answered
+
 * Which buildings have the highest energy output (kWh)?
 * Density: Where are many buildings with high potential close together?
 * Density 2: Where are many buildings with at least some potential close together?
@@ -41,6 +42,7 @@ Both datasets describe data in the region of the city of Lucerne.
 * Which buildings do have potential and are not (re)constructed for many years?
 
 **Filtering questions:**
+
 * Which of those are only for electricity or only for thermal power?
 * Which of those are under monumental protection?
 * Which of those are not downtown?
