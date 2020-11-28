@@ -1,1 +1,3 @@
 # solarpotential_lucerne
+
+test
