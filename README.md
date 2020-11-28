@@ -87,7 +87,8 @@ contacted.
 
 ## Results
 The main goal of the challenge was to provide the challenge owner with an excel file that would help 
-him promote the installation of solar panels.
+him promote the installation of solar panels. This goal was fully reached and the challenge therefore 
+successfully completed. 
 
 ## Outlook and further work
 
