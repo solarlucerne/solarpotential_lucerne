@@ -1,3 +1,11 @@
+"""
+Created on Sat Nov 28 2020
+
+Data cleaning and wrangling - final step - creating final data table
+
+@author: giuseppeperonato
+"""
+
 import pandas as pd
 
 data = pd.read_csv("building-types-peak-power.csv")
