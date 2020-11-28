@@ -103,4 +103,18 @@ The following algorithms were used:
 * k-Means
 * GMM (Gaussian Mixture Models)
 
+Example for clustering the buildings with k-means:
 ![Example for clustering with k-means](img/clustering-kmeans.png)
+
+Example for clustering the buildings with GMM:
+![Example for clustering with GMM](img/gmm-clustering.png)
+
+The results were thereafter imported into Google Earth for a more user-friendly and intuitive
+visualization:
+
+![Clustering results in Google Earth](img/google-earth-snippet.png)
+
+However, the interpretation of both clustering results with k-means and GMM proved to be quite
+difficult for the moment, so more work should go into the interpretation of the results and the
+tuning of the models. This way, we should be able to find a suitable number of clusters and 
+interpret the results accordingly.
