@@ -1,3 +1,7 @@
-# solarpotential_lucerne
+# Solar Energy in the City
 
-test
+## Open Data Hackdays – Shape my City -- Challenge 03
+
+## November 27 -- 28 2020
+
+
