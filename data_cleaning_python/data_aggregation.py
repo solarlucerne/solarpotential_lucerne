@@ -1,3 +1,11 @@
+"""
+Created on Fri Nov 27 2020
+
+Clustering using kmeans
+
+@author: thomasjenny
+"""
+
 import pandas as pd
 
 # Load data:
