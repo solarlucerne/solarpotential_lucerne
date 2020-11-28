@@ -1,3 +1,11 @@
+"""
+Created on Fri Nov 27 2020
+
+Data Cleaning - step 2
+
+@author: thomasjenny
+"""
+
 import pandas as pd
 
 data = pd.read_csv("data/buildings.csv")
