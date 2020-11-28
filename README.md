@@ -104,9 +104,11 @@ The following algorithms were used:
 * GMM (Gaussian Mixture Models)
 
 Example for clustering the buildings with k-means:
+
 ![Example for clustering with k-means](img/clustering-kmeans.png)
 
 Example for clustering the buildings with GMM:
+
 ![Example for clustering with GMM](img/gmm-clustering.png)
 
 The results were thereafter imported into Google Earth for a more user-friendly and intuitive
