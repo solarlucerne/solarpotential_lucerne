@@ -1,7 +1,7 @@
 """
 Created on Fri Nov 27 2020
 
-Clustering using kmeans
+Data Aggregation - First step
 
 @author: thomasjenny
 """
