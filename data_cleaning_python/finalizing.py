@@ -1,11 +1,3 @@
-"""
-Created on Sat Nov 28 2020
-
-Data cleaning and wrangling - final step - creating final data table
-
-@author: giuseppeperonato
-"""
-
 import pandas as pd
 
 data = pd.read_csv("building-types-peak-power.csv")
@@ -24,21 +16,29 @@ def calculate_floor_area(area, floors):
 # Replace all NA values with 0:
 data.fillna(0, inplace=True)
 
-# Transformi columns from float to intetger:
+# Transform columns from float to intetger:
 columns_to_transform = ["Bauperiode", "Renovationsjahr.des.Gebäudes", "Anzahl.Geschosse"]
 
 for column in columns_to_transform:
     data.loc[:, column] = data.loc[:, column].astype(int)
 
 
+# Merge the data set with cluster numbers, latitude and longitude:
+clusters = pd.read_csv("clustering.csv")
+
+print(data.shape)
+data = data.merge(clusters[["cluster", "GEB_ID", "lat", "lon"]], left_on="GEB_ID", right_on="GEB_ID", how = "left")
+print(data.shape)
+
+
 # Drop columns not needed:
-to_keep = ["GWR_EGID", "Peak Power", "Gebäudekategorie", 
+to_keep = ["GWR_EGID", "PV_ERTRAG", "Peak Power", "Gebäudekategorie", 
            "GBKLASSE", "Quartier", "TD_FLAECHE", "EIGNUNG", 
            "Anzahl.Geschosse", "Gebäudefläche", "Bauperiode", 
-           "Renovationsjahr.des.Gebäudes"]
+           "Renovationsjahr.des.Gebäudes", "DACHART_Factor", 
+           "cluster", "lat", "lon"]
 
 data = data.loc[:, data.columns.intersection(to_keep)]
-
 
 
 # Mapping "Quartiere":
@@ -128,7 +128,10 @@ data.rename(columns = {"GWR_EGID": "Eidgen. Gebäude ID",
                        "Renovationsjahr.des.Gebäudes": "Renovationsjahr",
                        "Anzahl.Geschosse": "Anzahl Geschosse",
                        "GBKLASSE": "Gebäudeklasse",
-                       "Floor.Area": "Grundfläche"},
+                       "Floor.Area": "Grundfläche",
+                       "PV_ERTRAG": "Ertrag/Jahr",
+                       "DACHART_Factor": "Dachart",
+                       "cluster": "Cluster"},
            inplace=True)
 
 
